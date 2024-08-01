@@ -1,0 +1,60 @@
+networks:
+  default:
+    driver: bridge
+  flashcard_proxy:
+    name: flashcard_proxy
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.90.0/24
+
+services:
+  springboot:
+    image: siobhanha/germanapp
+    networks:
+      flashcard_proxy:
+        ipv4_address: 192.168.90.21
+    ports:
+      - "8090:8090"
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      API_KEY: ${API_KEY}
+#    depends_on:
+#      - mysql
+
+  nginx:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+      - '81:81'
+    volumes:
+      - ./docker/appdata/nginx/data:/data
+      - ./docker/appdata/nginx/letsencrypt:/etc/letsencrypt
+      - ./docker/appdata/nginx/config:/config
+    networks:
+      flashcard_proxy:
+        ipv4_address: 192.168.90.23
+    environment:
+      DB_SQLITE_FILE: "/config/database.sqlite"
+      DISABLE_IPV6: 'true'
+
+#  mysql:
+#    image: mysql
+#    ports:
+#      - "3307:3306"
+#    networks:
+#      flashcard_proxy:
+#        ipv4_address: 192.168.90.22
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+#      - MYSQL_DATABASE=${MYSQL_DATABASE}
+#      - MYSQL_USER=${MYSQL_USER}
+#      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+#    volumes:
+#      - data:/var/lib/mysql
+#volumes:
+#  data:

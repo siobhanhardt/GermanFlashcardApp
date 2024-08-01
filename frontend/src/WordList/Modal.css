@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,400&display=swap");
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1.2;
+}
+.conjugation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px; /* Padding around the grid */
+  font-family: "Raleway";
+  justify-content: center;
+}
+
+.conjugation-item {
+  /* background-color: #2c2c2c;  */
+  padding: 20px;
+  border-radius: 5px;
+}
+.conjugation-item h4 {
+  font-size: 1.3rem;
+}
+.conjugation-text {
+  font-family: Raleway, sans-serif;
+  font-size: 1.2rem;
+}
+.list-word-modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.822);
+}
+
+.list-modal {
+  position: relative;
+  container-type: inline-size;
+  background-color: #383838;
+  width: 30em;
+  height: 40em;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.list-modal-german-word {
+  text-align: center;
+  margin-top: 2.5em;
+  font-size: 10cqw;
+}
+b.list-modal-german-word {
+  margin-top: 0.2em;
+}
+.list-modal-english {
+  font-size: 9cqw;
+  color: rgba(255, 255, 255, 0.4);
+}
+.list-modal-part-of-speech {
+  font-family: "Raleway";
+  font-size: 1.3em;
+  font-style: italic;
+  font-weight: 400;
+}
+.list-modal-sentence {
+  margin-top: 2em;
+  font-size: 7cqw;
+}
+.list-modal-sentence-en {
+  font-size: 6cqw;
+  color: rgba(255, 255, 255, 0.4);
+}
+.list-center {
+  text-align: center;
+}
+
+.list-modal-close {
+  position: absolute;
+  padding: 0;
+  background-color: transparent !important;
+  top: 30px;
+  right: 30px;
+}
+.list-modal-close:hover {
+  border-color: #ffffff;
+}
+.list-button-conjugations {
+  display: flex;
+  background-color: #ffffff21;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+.modal-word-status {
+  position: absolute;
+  bottom: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 3vh;
+  font-weight: 400;
+}
+.unseen {
+  background-color: rgba(116, 68, 74, 0.6);
+}
+.learned {
+  background-color: rgba(226, 172, 72, 0.6);
+}
+.mastered {
+  background-color: rgba(118, 175, 104, 0.6);
+}
+.seen {
+  background-color: rgba(108, 151, 185, 0.6);;
+}
+.modal-settings {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0) ;
+  padding: 0px
+}
+.modal-settings:hover {
+  border-color: rgba(0,0,0,0); 
+  color: rgba(255, 255, 255, 0.767);
+}
+.modal-settings-option-container{
+  position: absolute;
+  top:75px;
+}
+.modal-settings-option-container.hidden {
+  visibility: hidden;
+}
+
+.modal-settings-option-container.visible {
+  background-color: #181717e0;
+  padding: 10px;
+  border-radius: 10px;
+  visibility: visible;
+}
+
+.modal-settings-option {
+  cursor: pointer;
+  padding: 2px;
+}
+
+.email {
+  position: absolute;
+  left: 90px
+}
+
+@media only screen and (max-width: 600px) {
+  .list-modal {
+    width: 20em;
+    height: 30em;
+  }
+  .fa.fa-2x {
+    font-size: 22px;
+  }
+  .fa-solid.fa-2x {
+    font-size: 22px;
+  }
+  .list-modal-close {
+    background-color: transparent;
+  }
+  .email {
+    left: 70px
+  }
+  .list-modal-close {
+    padding: 0;
+  }
+  .list-button-conjugations {
+    font-size: 1em;
+    padding: 10px;
+  }
+  .conjugation-grid {
+    grid-gap: 5px;
+    padding: 10px; 
+  }
+  
+  .conjugation-item {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .conjugation-item h4 {
+    font-size: 0.9rem;
+  }
+  .conjugation-text {
+    font-size: 0.8rem;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+
+
+
+.light .list-word-modal-container {
+  background-color: rgba(219, 219, 219, 0.822);
+}
+.light .list-modal {
+  background-color: #f9f9f9;
+}
+.light .list-modal-english {
+  color: rgba(255, 255, 255, 0.4);
+}
+.light .list-modal-sentence-en {
+  color: #213547ab;
+}
+.light .list-button-conjugations {
+  background-color: #d3d3d3;
+}
+.light .modal-settings {
+  background-color: transparent ;
+}
+.light i {
+  color: #213547;
+}
+.light .modal-settings:hover {
+  border-color: rgba(0,0,0,0); 
+  color: rgba(255, 255, 255, 0.767);
+}
+.light .modal-settings-option-container.visible {
+  background-color: #d3d3d3;
+}
+.light .conjugation-text {
+  color: #213547;
+}
+
+.dark .list-word-modal-container {
+  background-color: rgba(32, 32, 32, 0.822);
+}
+.dark .list-modal {
+  background-color: var(--dark-background);
+}
+.dark .list-modal-english {
+  color: var(--dark-font);
+}
+.dark .list-modal-sentence-en {
+  color: rgba(255, 255, 255, 0.4);
+}
+.dark .list-button-conjugations {
+  background-color: var(--dark-background);
+}
+.dark .list-modal-close i {
+  color: var(--dark-font);
+  background-color: transparent;
+}
+.dark .modal-settings:hover {
+  border-color: rgba(22, 22, 22, 0); 
+  color: rgba(255, 255, 255, 0.767);
+}
+.dark .modal-settings-option-container.visible {
+  background-color: transparent;
+}
+.dark .conjugation-text {
+  color: var(--dark-font);
+}
+.dark .list-modal button{
+  background-color: transparent;
+}

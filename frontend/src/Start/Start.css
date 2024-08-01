@@ -1,0 +1,228 @@
+h1 {
+  text-align: center;
+}
+.home-button-container {
+  display: grid;
+  gap:1px;
+}
+.start-container {
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.practice-button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .title._1001 {
+    font-size: 12vh;
+  }
+  .title.german {
+    font-size: 7vh;
+  }
+  .title.words {
+    font-size: 8.5vh;
+  }
+  img {
+    width: 25vh;
+  }
+  .practice-button {
+    width: 90vw;
+    margin-top: 5px;
+    font-size: 3.2vh;
+    padding: 2vh;
+  }
+  .home-button {
+    width: 90vw;
+    margin-top: 5px;
+    font-size: 3.2vh;
+    padding: 2vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .title._1001 {
+    font-size: 12vh;
+  }
+  .title.german {
+    font-size: 7vh;
+  }
+  .title.words {
+    font-size: 8.5vh;
+  }
+  img {
+    width: 25vh;
+  }
+  .practice-button {
+    width: 350px;
+    margin-top: 10px;
+    font-size: 3.2vh;
+    padding: 2.2vh;
+  }
+  .home-button {
+    width: 50vw;
+    height: 150px;
+    padding: 0;
+    margin: 5px;
+    font-size: 5vw;
+  }
+  img {
+    width: 50vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .practice-button {
+    width: 350px;
+  }
+  .home-button {
+    width: 50vw;
+    height: 120px;
+    padding: 0;
+    margin: 5px;
+    font-size: 5vw;
+  }
+  img {
+    width: 45vw;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (orientation: landscape){
+  .home-button {
+    width: 25vw;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+    font-size: 3vw;
+  }
+  .practice-button {
+    width: 350px;
+    height: 120px;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    width: 50vw;
+  }
+  .start-button-container {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .home-button-container {
+    position: absolute;
+    grid-template-columns: auto auto;
+    bottom: 200px;
+    right: 2%;
+    gap: 10px
+  }
+  .start-container {
+    padding: 20px;
+  }
+  .title-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 20px;
+  }
+  .title-subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  h1 {
+    text-align: left;
+  }
+  .title._1001 {
+    font-size: 12vw;
+  }
+  .title.german,
+  .title.words {
+    font-size: 8.5vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (orientation: landscape){
+  .home-button {
+    width: 25vw;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    font-size: 3vw;
+  }
+  .practice-button {
+    width: 350px;
+    height: 120px;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    width: 40vw;
+  }
+  .start-button-container {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .home-button-container {
+    position: absolute;
+    bottom: 200px;
+    right: 8%;
+    grid-template-columns: auto auto;
+    gap: 10px
+  }
+  .start-container {
+    padding: 20px;
+  }
+  .title-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 20px;
+  }
+  .title-subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  h1 {
+    text-align: left;
+  }
+  .title._1001 {
+    font-size: 12vw;
+  }
+  .title.german,
+  .title.words {
+    font-size: 8.5vw;
+  }
+}

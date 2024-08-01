@@ -1,0 +1,129 @@
+
+.test-wrapper {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.test-word-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start; 
+    padding: 20px; 
+}
+.test-word-wrapper h1 {
+    font-size: 5em;
+    padding: 20px;
+}
+.test-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.test-input-wrapper p {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.test-card-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(82, 43, 43);
+    color: white;
+}
+
+.correct {
+    background-color: rgba(76, 110, 76, 0.808);
+}
+.incorrect {
+    background-color: rgba(116, 55, 55, 0.685);
+}
+.english {
+    text-align: right;
+    justify-content: right;
+    margin-right: 0;
+}
+.test-buttons {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.test-button {
+    padding: 20px;
+    margin: 10px;
+}
+.finished-test-container {
+    margin-top: 20px;
+}
+.option-buttons {
+    margin: 5px 5px;
+    font-size: 2em;
+    width: 300px;
+
+}
+.next-button.dis:disabled {
+    color: rgba(131, 131, 131, 0.342);
+    cursor: auto;
+}
+@media only screen and (max-width: 600px) {
+
+    .test-wrapper {
+        margin-top: 100px;        
+    }
+    .test-word-wrapper {
+        padding: 20px; 
+    }
+    .test-word-wrapper h1 {
+        font-size: 7vw;
+        padding: 10px;
+    }
+    .test-input-wrapper p {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .option-buttons {
+        margin: 5px 5px;
+        font-size: 2em;
+        width: 300px;
+    
+    }
+  
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
+  
+  
+  @media (prefers-color-scheme: light) {
+
+  }
+  

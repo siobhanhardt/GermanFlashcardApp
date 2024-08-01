@@ -1,0 +1,85 @@
+.stats-container {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10vh;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px; 
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.score-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 6vh;
+    justify-content: center;
+}
+.score-container p {
+    padding: 10px;
+}
+.stats-container h1 {
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .chart-container {
+        width: 400px;
+        height: 400px;
+    }
+    .score-container {
+        font-size: 2.8vh;
+    }
+
+}
+
+/* styles for large phones and tablets in portrait */
+@media only screen and (min-width: 600px) and (max-width: 1025px) and (orientation: portrait) {
+    .stats-container h1 {
+        font-size: 6vh;
+    }
+    .chart-container {
+        width: 550px;
+        height: 550px;
+    }
+    .score-container {
+        font-size: 4vh;
+    }
+}
+
+/*Styles for phones in landscape */
+@media only screen and (min-resolution: 2dppx) and (min-width: 600px) and (max-width: 1001px) and (orientation: landscape) {
+}
+
+/* laptops and landscape tablets  */
+@media only screen and (min-width: 928px) and (max-width: 1400px) and (orientation: landscape) {
+    .stats-container h1 {
+        font-size: 8vh;
+    }
+    .chart-container {
+        width: 450px;
+        height: 450px;
+    }
+    .score-container {
+        font-size: 4vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 900px) {
+    .stats-container h1 {
+        font-size: 8vh;
+    }
+    .chart-container {
+        padding-top: 40px;
+        width: 550px;
+        height: 550px;
+    }
+    .score-container {
+        font-size: 4vh;
+    }
+}
+

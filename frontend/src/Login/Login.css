@@ -1,0 +1,113 @@
+.login-button {
+  z-index: 2000;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.signup-modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent !important;
+}
+.user-name {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+}
+.signup-switch-button {
+  background-color: transparent !important;
+}
+.signup-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.425);
+}
+.signup-modal {
+  position: relative;
+  container-type: inline-size;
+  width: 30em;
+  height: 35em;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form div {
+  margin-bottom: 1em;
+}
+
+.signup-form label {
+  margin-bottom: 0.5em;
+}
+
+.signup-form input {
+  padding: 0.5em;
+  border: 1px solid #818181;
+  border-radius: 4px;
+  font-size: 1em;
+  width: calc(100% - 1em);
+}
+
+.signup-form button {
+  padding: 0.75em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.signup-form button:hover {
+  background-color: #000000;
+}
+
+.signup-form p {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.signup-form p[style*="color: red"] {
+  color: red;
+}
+
+.signup-form p[style*="color: green"] {
+  color: green;
+}
+
+.dark .signup-modal {
+  background-color: var(--dark-background);
+}
+.dark .signup-form input {
+  background-color: var(--dark-button);
+  border-color: var(--dark-button);
+  color: var(--dark-font)
+}
+.light .signup-form button:hover {
+  background-color: #cfcfcf;
+}
+.light .signup-modal {
+  background-color: var(--light-background);
+}
+.light .signup-form input {
+  background-color: var(--light-button);
+  border-color: #ffffff;
+  color: var(--light-font);
+}

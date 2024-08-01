@@ -1,0 +1,43 @@
+.toggle-container {
+    position: absolute;
+}
+
+.toggle-button {
+    background-color: white;
+    border: 1px solid var(--light-font);
+    border-radius: 100px;
+    width: 50px;
+    height: 28px;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.753);
+    position: relative;
+
+}
+
+.thumb {
+    height: 20px;
+    width:20px;
+    background-color: var(--light-font);
+    border-radius: 100px;
+    transform: translareX(0);
+    transition: left 0.15s ease;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-button.dark {
+    background-color: rgb(63, 63, 63);
+}
+.thumb.dark {
+    background-color: rgb(255, 255, 255);
+}
+.toggle-button:hover {
+    border-color: rgb(121, 121, 121);;
+}
+
+.toggle-button.dark .thumb {
+    left: calc(50px - 25px);
+}

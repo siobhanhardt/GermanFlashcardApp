@@ -1,0 +1,233 @@
+.filter-panel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: #1b1b1b;
+  z-index: 4000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Starts off-screen */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.filter-panel.open {
+  transform: translateX(0); /* Slides in */
+}
+
+.filter-title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 2.5em;
+}
+.search-bar-wrapper {
+  position: relative;
+}
+.search-bar {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.315);
+  font-size: 20px;
+}
+.search-clear-button {
+  position: absolute;
+  top:0;
+  right:10px;
+  background-color: transparent !important;
+}
+.special-char-button {
+  display: flex;
+  justify-content: center;
+}
+.special-char-button button {
+  background-color: rgba(0, 0, 0, 0.39);
+  padding: 10px;
+  margin: 10px 5px 0px 5px;
+}
+.filter-container {
+  top: 20px;
+}
+.selection-container {
+  margin-left: 30px;
+}
+.selection-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selection-container label {
+  display: flex;
+  align-items: center;
+}
+
+.filter-selection-title {
+  padding: 15px 0 15px 0px;
+  font-size: 20px;
+}
+.checkbox {
+  appearance: none; /* Removes default styling */
+  -webkit-appearance: none; /* Specific for Safari */
+  background-color: transparent; /* Background matches the page background */
+  border: 2px solid rgba(255, 255, 255, 0.87); /* White border */
+  border-radius: 3px; /* Optional: adds rounded corners */
+  width: 20px; /* Size of the checkbox */
+  height: 20px;
+  cursor: pointer;
+  position: relative; /* Positioning context for pseudo-element */
+}
+.checkbox:checked::before {
+  content: "\f00c"; /* Font Awesome check icon */
+  font-family: "Font Awesome 5 Free"; /* Font family for Font Awesome */
+  color: white; /* Icon color */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the icon */
+  font-weight: 900; /* Ensure the icon is solid */
+}
+.checkbox:hover {
+  filter: brightness(120%);
+}
+.checkbox-label {
+  margin-left: 8px; /* Additional control over spacing, if needed */
+  text-transform: capitalize;
+  font-size: 20px;
+}
+.clearall-button {
+  position: absolute;
+  background-color: transparent;
+  margin-right: 0px;
+  margin-left: 50%;
+  padding-top: 15px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.87);
+}
+.clearall-button:hover {
+  border: 0px;
+  font-weight: 600;
+}
+
+.filter-panel-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .search-bar {
+    width: 250px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  .word-list-title-container {
+    background-color: white;
+  }
+  .word-container {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+  .filter-panel {
+    background-color: #f9f9f9;
+  }
+  .checkbox {
+    border: 2px solid #213547; /* White border */
+  }
+  .checkbox:checked::before {
+    color: #213547; 
+  }
+  .clearall-button {
+    color: #213547;
+  }
+
+  .dropdown-list {
+    background: rgba(189, 189, 189, 0.315);
+  }
+
+  .dropdown-list li {
+    color: #213547;
+  }
+  .search-bar {
+    background-color: rgba(189, 189, 189, 0.315);
+  }
+  .special-char-button button {
+    background-color: rgba(189, 189, 189, 0.315);
+  }
+}
+
+
+
+.light .filter-panel {
+  background-color: #f9f9f9;
+}
+.light .checkbox {
+  border: 2px solid #213547; /* White border */
+}
+.light .checkbox:checked::before {
+  color: #213547; 
+}
+.light .clearall-button {
+  color: rgba(0, 0, 0, 0.39);
+}
+.light .search-bar {
+  background-color: rgba(189, 189, 189, 0.315);
+  color: var(--light-font)
+}
+.light .special-char-button button {
+  background-color: rgba(189, 189, 189, 0.315);
+}
+.light .clearall-button {
+  background-color: transparent;
+  color: var(--light-font)
+}
+
+.dark .filter-panel {
+  background-color: #1b1b1b;
+}
+.dark .checkbox {
+  border: 2px solid rgba(255, 255, 255, 0.87); /* White border */
+}
+.dark.checkbox:checked::before {
+  color: rgba(255, 255, 255, 0.87); 
+}
+.dark .clearall-button {
+  color: rgba(255, 255, 255, 0.87);;
+}
+
+.dark .search-bar {
+  background-color: rgba(189, 189, 189, 0.315);
+}
+.dark .special-char-button button {
+  background-color: rgba(189, 189, 189, 0.315);
+}
+.dark .filter-panel-close-button i{
+  color: white;
+}
+.dark .filter-panel-button i{
+  color: white;
+}
