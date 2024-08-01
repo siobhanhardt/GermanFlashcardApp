@@ -9,7 +9,7 @@
   </a>
 
   <h3 align="center">1001 German Words</h3>
-
+  <a href="https://1001germanwords.com">1001germanwords.com</a>
   <p align="center">
     This is a project I started to help me hopefully improve my German and React/Springboot skills simultaneously!
     <br />
@@ -36,7 +36,7 @@ I was able to eliminate some repeats this way as it would generally spit out the
 
 I also created a second table for conjugating irregular verbs, which I manually entered, as luckily the list wasn't too long.
 ## React Structure
-
+![Structure](images/reacttree.jpg)
 ## Deploying
 
 I deployed the backend of the app using Docker and a VM on Google Cloud. I used Docker Compose to create the Image and uploaded that to Google Cloud. I ended up puttin my MYSQL database directly onto the VM as it made the requests a little quicker. I used NPM Proxy Manager to re-route the IP address of the VM to use a subdomain of the domain I had purchased.
