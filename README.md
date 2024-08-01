@@ -36,12 +36,12 @@ I was able to eliminate some repeats this way as it would generally spit out the
 
 I also created a second table for conjugating irregular verbs, which I manually entered, as luckily the list wasn't too long.
 ## React Structure
-![Structure](images/reacttree.jpg)
+
 ## Deploying
 
 I deployed the backend of the app using Docker and a VM on Google Cloud. I used Docker Compose to create the Image and uploaded that to Google Cloud. I ended up puttin my MYSQL database directly onto the VM as it made the requests a little quicker. I used NPM Proxy Manager to re-route the IP address of the VM to use a subdomain of the domain I had purchased.
 
-### Built With
+## Built With
 
 * [![React][React.js]][React-url]
 * ![MYSQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
