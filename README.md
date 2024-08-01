@@ -35,7 +35,8 @@ I used a list of german words pulled from subtitles that I got from [here](https
 I was able to eliminate some repeats this way as it would generally spit out the infinitive form of a verb for example. Unfortunately there were cases, like with 'habe' for example, where there is a noun 'Habe' which means 'property' and that would be added to the list, when that probably isn't in the top 1000 words. I also got the translation, word type and example sentence from this API. I had to do a lot of manual cleanup to remove some words, update translations and example sentences. There is definitely some words in there that are unlikely to be in the top 1000 of everday speech, that are heavily influenced by popular themes in movies and tv like crime dramas for example.
 
 I also created a second table for conjugating irregular verbs, which I manually entered, as luckily the list wasn't too long.
-
+## React Structure
+![Structure](images/reacttree.jpg)
 ## Deploying
 
 I deployed the backend of the app using Docker and a VM on Google Cloud. I used Docker Compose to create the Image and uploaded that to Google Cloud. I ended up puttin my MYSQL database directly onto the VM as it made the requests a little quicker. I used NPM Proxy Manager to re-route the IP address of the VM to use a subdomain of the domain I had purchased.
@@ -61,10 +62,10 @@ I deployed the backend of the app using Docker and a VM on Google Cloud. I used 
 ## Usage
 
 ![Selection](images/practice.png)
-![Selection](images/flashcards.png)
-![Selection](images/wordlist.png)
-![Selection](images/test.png)
-![Selection](images/stats.png)
+![Flashcards](images/flashcards.png)
+![WordList](images/wordlist.png)
+![Test](images/test.png)
+![Stats](images/stats.png)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
