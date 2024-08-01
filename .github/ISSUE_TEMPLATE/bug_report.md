@@ -1,9 +1,7 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: "Bug report \U0001F41E"
+about: Create a bug report
+labels: bug
 
 ---
 
