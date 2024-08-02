@@ -39,7 +39,7 @@ I also created a second table for conjugating irregular verbs, which I manually 
 ![Structure](images/reacttree.jpg)
 ## Deploying
 
-I deployed the backend of the app using Docker and a VM on Google Cloud. I used Docker Compose to create the Image and uploaded that to Google Cloud. I ended up puttin my MYSQL database directly onto the VM as it made the requests a little quicker. I used NPM Proxy Manager to re-route the IP address of the VM to use a subdomain of the domain I had purchased.
+I deployed the backend of the app using Docker and a VM on Google Cloud. I created the docker image and uploaded that to Docker Hub. I then used Docker Compose to create my containers on my VM. I ended up putting the MYSQL database directly onto the VM as it made the requests a little quicker. I used NPM Proxy Manager to re-route the IP address of the VM to use a subdomain of the domain I had purchased.
 
 ## Built With
 
